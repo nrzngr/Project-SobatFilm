@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2023 nrzngr
+ * copyright 2023 codewithsadee
  */
 
 /*-----------------------------------*\
@@ -677,6 +677,27 @@ body {
 /*-----------------------------------*\
   #SEARCH MODAL
 \*-----------------------------------*/
+
+.search-modal {
+  position: fixed;
+  top: 96px;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--surface);
+  padding: 50px 24px;
+  overflow-y: overlay;
+  z-index: 4;
+  display: none;
+}
+
+.search-modal.active { display: block; }
+
+.search-modal .label {
+  color: var(--primary-variant);
+  font-weight: var(--weight-bold);
+  margin-block-end: 8px;
+}
 
 
 /*-----------------------------------*\
