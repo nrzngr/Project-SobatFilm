@@ -27,27 +27,21 @@ export function sidebar () {
     </div>
     <div class="sidebar-list">
       <p class="title">Language</p>
-      <a href="./movie-list.html" menu-close class="sidebar-link">
+      <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=en", "English")'>
         English
       </a>
-      <a href="./movie-list.html" menu-close class="sidebar-link">
-        Hindi
+      <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=id", "Indonesian")'>
+        Indonesian
       </a>
-      <a href="./movie-list.html" menu-close class="sidebar-link">
-        French
+      <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=ja", "Japanese")'>
+        Japanese
       </a>
-      <a href="./movie-list.html" menu-close class="sidebar-link">
-        German
-      </a>
-      <a href="./movie-list.html" menu-close class="sidebar-link">
-        Spanish
-      </a>
-      <a href="./movie-list.html" menu-close class="sidebar-link">
-        Chinese
+      <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=ru", "Russian")'>
+        Russian
       </a>
     </div>
     <div class="sidebar-footer">
-      <p class="copyright">Copyright 2023 Sobat Film</p>
+      <p class="copyright">Copyright 2023 nrzngr</p>
       <img
         src="./assets/images/tmdb-logo.svg"
         width="130"
@@ -64,7 +58,7 @@ export function sidebar () {
       link.classList.add("sidebar-link");
       link.setAttribute("href", "./movie-list.html");
       link.setAttribute("menu-close", "");
-      //link.setAttribute("onclick",`getMovieList("with_genres=${genreId}", "${genreName}")`);
+      link.setAttribute("onclick",`getMovieList("with_genres=${genreId}", "${genreName}")`);
       link.textContent = genreName;
 
       sidebarInner.querySelectorAll(".sidebar-list")[0].appendChild(link);
