@@ -3,6 +3,7 @@
 import { api_key, fetchDataFromServer } from "./api.js";
 import { createMovieCard } from "./movie-card.js";
 import { sidebar } from "./sidebar.js";
+import {search} from "./search.js";
 
 
 // collect genreName & urlParam from localStorage  
@@ -14,7 +15,7 @@ const pageContent = document.querySelector("[page-content]");
 
 
 sidebar();
-
+search();
 
 let currentPage = 1;
 let totalPages = 0;
@@ -81,3 +82,5 @@ fetchDataFromServer(`https://api.themoviedb.org/3/discover/movie?api_key=${api_k
 
     })
 });
+
+
