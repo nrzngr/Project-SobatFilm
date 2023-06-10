@@ -36,14 +36,14 @@ export function sidebar () {
       <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=ja", "Japanese")'>
         Japanese
       </a>
-      <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=ru", "Russian")'>
-        Russian
+      <a href="./movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=ko", "Korean")'>
+        Korean
       </a>
     </div>
     <div class="sidebar-footer">
       <p class="copyright">Copyright 2023 nrzngr</p>
       <img
-        src="./assets/images/tmdb-logo.svg"
+        src="./assets/images/nrzngr.png"
         width="130"
         height="17"
         alt="the movie database logo" />
