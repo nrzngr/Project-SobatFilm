@@ -15,15 +15,15 @@ sidebar();
 /** Home page (Top Rated, Upcoming, Trending) */
 const homePageSections = [
   {
-    title: "Upcoming Movies",
+    title: "Segera Tayang",
     path: "/movie/upcoming"
   },
   {
-    title: "Today\'s Trending Movies",
+    title: "Populer Minggu Ini",
     path: "/trending/movie/week"
   },
   {
-    title: "Top Rated Movies",
+    title: "Top Rated Film",
     path: "/movie/top_rated"
   }
 ]
@@ -103,7 +103,8 @@ const heroBanner = function({results: movieList}){
           <p class="banner-text">
             ${overview}
           </p>
-          <a href="./detail.html" class="btn">
+          <a href="./detail.html" class="btn"
+          onclick="getMovieDetail(${id})">
             <img
               src="./assets/images/play_circle.png"
               width="24"
@@ -202,4 +203,5 @@ const createMovieList = function({results: movieList}, title){
   }
 
   pageContent.appendChild(movieListElem);
+
 }
