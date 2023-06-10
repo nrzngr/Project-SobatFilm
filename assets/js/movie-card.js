@@ -42,8 +42,9 @@ export function createMovieCard(movie){
 
         <a
         href="./detail.html"
-        class="card-btn"
-        title="${title}">
+        class="card-btn"https://api.themoviedb.org/3/movie/603692?api_key=8367b5b226d32b7bcd07f585ee724277&append_to_response=casts,videos,images,releases
+        title="${title}"
+        onclick="getMovieDetail(${id})">
         </a>
     `;
 
