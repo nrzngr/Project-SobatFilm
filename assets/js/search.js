@@ -32,7 +32,7 @@ export function search() {
 
                 searchWrapper.classList.remove("searching");
                 searchResultModal.classList.add("active");
-                searchResultModal.innerHTML = ""; // remove old results
+                searchResultModal.innerHTML = "";  //menghapus history search sebelumnya 
 
                 searchResultModal.innerHTML = `
                     <p class="label">Results for</p>
