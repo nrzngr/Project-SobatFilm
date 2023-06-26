@@ -6,7 +6,7 @@ import { sidebar } from "./sidebar.js";
 import {search} from "./search.js";
 
 
-// collect genreName & urlParam from localStorage  
+// mengambil genreName & urlParam dari localStorage
 const genreName = window.localStorage.getItem("genreName");
 const urlParam = window.localStorage.getItem("urlParam");
 
@@ -44,8 +44,8 @@ fetchDataFromServer(`https://api.themoviedb.org/3/discover/movie?api_key=${api_k
     `;
 
 
-    /** add movie card based on fetched genre */
-
+    
+    /** menambahkan movie card berdasarkan genre yang di fetch */
     for (const movie of movieList) {
         const movieCard = createMovieCard(movie);
 
@@ -55,8 +55,8 @@ fetchDataFromServer(`https://api.themoviedb.org/3/discover/movie?api_key=${api_k
     pageContent.appendChild(movieListElem);
 
 
-    /** Load More button functionality */
-
+    
+    /** Fungsionalitas pada tombol "Load More" */
     document.querySelector("[load-more]").addEventListener("click", function() {
 
         if (currentPage >= totalPages) {
