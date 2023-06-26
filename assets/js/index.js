@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * import all components and function
+ * import semua komponen dan function yang diperlukan
  */
 import  {sidebar} from "./sidebar.js";
 import { api_key, imageBaseURL, fetchDataFromServer } from "./api.js";
@@ -13,7 +13,7 @@ const pageContent = document.querySelector("[page-content]");
 sidebar();
 search();
 
-/** Home page (Top Rated, Upcoming, Trending) */
+/** Home page (Top Rated, Segera Tayang, Trending) */
 const homePageSections = [
   {
     title: "Segera Tayang",
@@ -31,7 +31,8 @@ const homePageSections = [
 
 
 const genreList = {
-  //create genre string from genre_id
+
+  // Membuat string genre yang didapat dari genre_id
   asString(genreIdList) {
     let newGenreList = [];
 
@@ -142,7 +143,7 @@ const heroBanner = function({results: movieList}){
   addHeroSlide();
 
 
-  /** Fetch data for homePageSections */
+  /** Fetch data yang dibutuhkan untuk homePageSections */
   for(const {title, path} of homePageSections) {
     fetchDataFromServer(`https://api.themoviedb.org/3${path}?api_key=${api_key}&page=1`, createMovieList, title);
   }
@@ -150,7 +151,8 @@ const heroBanner = function({results: movieList}){
 }
 
 
-/** Hero Slider functionality */
+
+/** Fungsionalitas slider pada hero content */
 const addHeroSlide = function(){
   const sliderItems = document.querySelectorAll("[slider-item]");
   const sliderControls = document.querySelectorAll("[slider-control]");
@@ -198,7 +200,7 @@ const createMovieList = function({results: movieList}, title){
   `
 
   for (const movie of movieList){
-    const movieCard = createMovieCard(movie); //called from movie_card.js
+    const movieCard = createMovieCard(movie); // Dipanggil dari movie_card.js
 
     movieListElem.querySelector(".slider-inner").appendChild(movieCard);
   }
