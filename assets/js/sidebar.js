@@ -4,10 +4,11 @@ import { api_key, fetchDataFromServer } from "./api.js";
 
 export function sidebar () {
 
+
   /**
- * fetch all genre eg: [ { "id": "123", "name": "Action"}]
- * then change genre formate eg: { 123: "Action" }
- */
+   * fetch semua genre contoh: [{"id": "123", "name": "Action"}]
+   * lalu diubah genre format nya menjadi { 123: "Action" }
+   */
   const genreList = {};
 
   fetchDataFromServer(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`, function ({ genres }) {
@@ -72,7 +73,7 @@ export function sidebar () {
   }
 
   const toggleSidebar = function(sidebar) {
-    /** Toggle sidebar mobile */
+    /** Konfigurasi sidebar untuk mobile device */
 
     const sidebarBtn = document.querySelector("[menu-btn]");
     const sidebarTogglers = document.querySelectorAll("[menu-toggler]");
