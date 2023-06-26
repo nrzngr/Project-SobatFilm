@@ -5,11 +5,12 @@ import {sidebar} from "./sidebar.js";
 import { createMovieCard } from "./movie-card.js";
 import {search} from "./search.js"
 
+sidebar();
+search();
+
 const movieId = window.localStorage.getItem("movieId");
 const pageContent = document.querySelector("[page-content]");
 
-sidebar();
-search();
 
 const getGenres = function(genreList){
     const newGenreList = [];
@@ -166,7 +167,7 @@ const addSuggestedMovies = function({results: movieList}, title){
     `
   
     for (const movie of movieList){
-      const movieCard = createMovieCard(movie); //called from movie_card.js
+      const movieCard = createMovieCard(movie); //dipanggil dari movie-card.js 
   
       movieListElem.querySelector(".slider-inner").appendChild(movieCard);
     }
