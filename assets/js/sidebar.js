@@ -42,12 +42,8 @@ export function sidebar () {
       </a>
     </div>
     <div class="sidebar-footer">
-      <p class="copyright">Copyright 2023 nrzngr</p>
-      <img
-        src="./assets/images/nrzngr.png"
-        width="130"
-        height="17"
-        alt="the movie database logo" />
+      <p class="copyright">Copyright 2023 SobatFilm.</p>
+      
     </div>
   `;
 
